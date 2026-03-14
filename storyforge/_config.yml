@@ -1,7 +1,6 @@
 # 禁用Jekyll处理
 theme: null
 plugins: []
-include: [".nojekyll"]
 exclude: []
 
 # 确保所有文件都被处理
@@ -14,6 +13,7 @@ draft: false
 
 # 明确包含所有文件
 include:
+  - ".nojekyll"
   - "**/*.html"
   - "**/*.htm"
   - "**/*.md"
@@ -22,7 +22,6 @@ include:
   - "**/*.css"
   - "**/*.jpg"
   - "**/*.png"
-  - "**/.nojekyll"
   - "reader/"
   - "reader/index.html"
   - "reader/.nojekyll"
