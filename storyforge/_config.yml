@@ -1,0 +1,22 @@
+# 禁用Jekyll处理
+theme: null
+plugins: []
+include: [".nojekyll"]
+exclude: []
+
+# 确保所有文件都被处理
+safe: false
+
+# 禁用自动页面生成
+future: false
+unpublished: false
+draft: false
+
+# 明确包含所有文件
+include:
+  - "**/*.html"
+  - "**/*.htm"
+  - "**/.nojekyll"
+  - "reader/"
+  - "reader/index.html"
+  - "reader/.nojekyll"
