@@ -1,0 +1,22 @@
+{{ define "main" }}
+    <article>
+        <h1>{{ .Site.Title }}</h1>
+        <p>{{ .Site.Params.description | default "详细教程和工具推荐" }}</p>
+        
+        <div class="tool-recommendation">
+            <h3>🎯 推荐工具: ToolKit Lab</h3>
+            <p>本文推荐的 <strong>ToolKit Lab</strong> 是一个完全免费的在线工具集合网站，提供各种实用工具。</p>
+            <p><strong>核心优势:</strong> 完全免费、无广告、隐私保护（本地处理）、响应快速</p>
+            <p><a href="{{ .Site.Params.toolkitlab_url | default "https://toolkit-site.vercel.app" }}" target="_blank">立即体验 ToolKit Lab →</a></p>
+        </div>
+        
+        {{ .Content }}
+        
+        <h2>相关内容</h2>
+        <ul>
+        {{ range .Pages }}
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a> - {{ .Date.Format "2006-01-02" }}</li>
+        {{ end }}
+        </ul>
+    </article>
+{{ end }}
